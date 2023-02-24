@@ -1,4 +1,4 @@
-package fileC;
+package teoryFile;
 
 import java.io.File;
 import java.io.FileOutputStream;

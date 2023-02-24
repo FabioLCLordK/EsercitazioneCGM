@@ -5,7 +5,7 @@ Validare i campi nei metodi setter e nel costruttore lanciando eventualmente una
 Come step successivo definire delle eccezioni custom specifiche per ogni situazione (ereditando da RuntimeException).
 */
 
-package userException;
+package esercizioUserException;
 
 public class Main {
     

@@ -20,6 +20,10 @@ public class Blog {
         
         this.artNumber++;
     }
+    public void removeArticle(int index){
+        this.articles=ArrayFactory.removeFromArray(index-1, articles);
+        this.artNumber-=1;
+    }
     
     public void printArticles(){
         for(int x=0; x<artNumber;x++){
