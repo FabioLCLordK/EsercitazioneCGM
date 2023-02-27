@@ -46,7 +46,7 @@ public class Main {
         SortedSet<Integer> s2 = new TreeSet<>(new Comparator<Integer>(){
             @Override
             public int compare(Integer left, Integer right){
-                return right-left;
+                return left-right;
             }
         });
         s2.add(6);
