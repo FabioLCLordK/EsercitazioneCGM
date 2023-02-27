@@ -1,5 +1,6 @@
 package teoryHashSet;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.SortedSet;
@@ -30,20 +31,29 @@ public class Main {
         
         System.out.println(ints2.toString());
         
-        //Posso definire una classe momentenea sul momento se mi serve solo per questo
-        
-        SortedSet<Integer> s1 = new TreeSet<>(new InverseComparator<Integer>(){
-            {
-            @Override
-            public int compare(Integer left, Integer right){
-                return right-left;
-            }
-        });
+        SortedSet<Integer> s1 = new TreeSet<>(new IntegerComparator());
         s1.add(6);
         s1.add(17);
         s1.add(1);
         s1.add(-134);
         
         System.out.println(s1.toString());
+        
+        
+        
+        //Posso definire una classe momentenea sul momento se mi serve solo per questo
+        
+        SortedSet<Integer> s2 = new TreeSet<>(new Comparator<Integer>(){
+            @Override
+            public int compare(Integer left, Integer right){
+                return right-left;
+            }
+        });
+        s2.add(6);
+        s2.add(17);
+        s2.add(1);
+        s2.add(-134);
+        
+        System.out.println(s2.toString());
     }
 }
