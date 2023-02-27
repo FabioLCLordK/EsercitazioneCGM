@@ -2,7 +2,7 @@ package esercizioInvoice;
 
 import teoryGeneric.*;
 
-public class Invoice <T extends Integer> {
+public class Invoice <T extends Integer> implements Comparable<Invoice>{
     private T id;
     private String clientId;
     private double amount;
@@ -40,6 +40,11 @@ public class Invoice <T extends Integer> {
     @Override
     public String toString() {
         return "Invoice{" + "id=" + id + ", clientId=" + clientId + ", amount=" + amount + '}';
+    }
+
+    @Override
+    public int compareTo(Invoice rInvoice) {
+        return this.getId()-rInvoice.getId();
     }
     
     

@@ -10,14 +10,20 @@ import java.util.TreeSet;
 public class Main {
     public static void main(String[] args) {
         
-        Set<Invoice> prova = new TreeSet<>(new Comparator<Invoice>(){
-            @Override
-            public int compare(Invoice left, Invoice right){
-                
-                return right.getId()-left.getId();
-            }
-        });
+        // in questo modo utilizzerò un nuovo comparator definito sul momento
         
+//        Set<Invoice> prova = new TreeSet<>(new Comparator<Invoice>(){
+//            @Override
+//            public int compare(Invoice left, Invoice right){
+//                
+//                return right.getId()-left.getId();
+//            }
+//        });
+        
+        Set<Invoice> prova = new TreeSet<>();  //utilizzera il metodo di default
+        //della classe Invoice
+        
+
         Invoice fatt1=new Invoice(1, "fabio", 1000);
         Invoice fatt2=new Invoice(2, "sara", 500);
         Invoice fatt3=new Invoice(8, "paco", 500);
