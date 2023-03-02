@@ -36,7 +36,21 @@ public class Main {
         for (Invoice x:prova){
             System.err.println(x.toString());
         }
-
+        
+        Set<String> lettere= new TreeSet<>(new Comparator<String>(){
+            @Override
+            public int compare(String left, String right){
+                // compare tu di streang scambia due stringhe
+                return right.compareTo(left);
+            }
+        });
+        lettere.add("ab");
+        lettere.add("aa");
+        lettere.add("c");
+        
+        for(String x:lettere){
+            System.out.println(x);
+        }
         
     }
 }
