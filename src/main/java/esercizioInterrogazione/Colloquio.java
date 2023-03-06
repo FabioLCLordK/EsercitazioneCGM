@@ -18,6 +18,6 @@ public class Colloquio {
          System.out.print(",");
         }
       }
-      
+        
     }
 }
